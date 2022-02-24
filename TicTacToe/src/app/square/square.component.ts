@@ -9,5 +9,5 @@ import { Component, Input } from '@angular/core';
   ]
 })
 export class SquareComponent {  // UI dumb component
-  @Input() value: 'X' | 'O' | undefined;
+  @Input() value: 'X' | 'O';
 }
