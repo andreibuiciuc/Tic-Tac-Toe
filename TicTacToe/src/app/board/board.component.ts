@@ -50,12 +50,17 @@ export class BoardComponent implements OnInit {
   }
 
   makeMove(index: number) {
-    if (!this.squares[index]) {
-      this.squares.splice(index, 1, this.getCurrentPlayer());
-      this.xIsNext = !this.xIsNext;
+    if (!this.winner) {
+      if (!this.squares[index]) {
+        this.squares.splice(index, 1, this.getCurrentPlayer());
+        this.xIsNext = !this.xIsNext;
+      }
     }
+   
+
 
     this.winner = this.getWinner();
+    
   }
 
 }
